@@ -13,10 +13,10 @@
 
 @property (strong, nonatomic) Employee *employee;
 
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *jobTitleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *dateOfBirthLabel;
-@property (strong, nonatomic) IBOutlet UILabel *yearsEmployedLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *jobTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateOfBirthLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearsEmployedLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 
 @end

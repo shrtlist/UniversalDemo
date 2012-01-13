@@ -83,19 +83,6 @@
     [self configureView];
 }
 
-- (void)viewDidUnload
-{
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-    self.nameLabel = nil;
-    self.jobTitleLabel = nil;
-    self.dateOfBirthLabel = nil;
-    self.yearsEmployedLabel = nil;
-    self.photoImageView = nil;
-
-    [super viewDidUnload];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
