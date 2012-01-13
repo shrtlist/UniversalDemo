@@ -12,6 +12,7 @@
 
 @interface MasterViewController () // Class extension
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)loadData;
 @end
 
 @implementation MasterViewController
@@ -39,8 +40,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.employeeViewController = (EmployeeViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 
-    // Recreate the sample data
-    [self refresh];
+    // Load the sample data
+    [self loadData];
 
     // Set up the Edit bar button item.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
@@ -260,8 +261,15 @@
 
 #pragma mark - Action method
 
-// For this demo, repopulate the data store by deleting and recreating all Employee managed objects.
 - (IBAction)refresh
+{
+    [self loadData];
+}
+
+#pragma mark - Data load
+
+// For this demo, repopulate the data store by deleting and recreating all Employee managed objects.
+- (void)loadData
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     
