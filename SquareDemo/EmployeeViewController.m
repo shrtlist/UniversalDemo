@@ -9,7 +9,13 @@
 #import "EmployeeViewController.h"
 
 @interface EmployeeViewController () // Class extension
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *jobTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateOfBirthLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearsEmployedLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+
 - (void)configureView;
 @end
 

@@ -13,10 +13,4 @@
 
 @property (strong, nonatomic) Employee *employee;
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *jobTitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *dateOfBirthLabel;
-@property (weak, nonatomic) IBOutlet UILabel *yearsEmployedLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
-
 @end

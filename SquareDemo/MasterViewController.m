@@ -11,6 +11,7 @@
 #import "Employee.h"
 
 @interface MasterViewController () // Class extension
+- (IBAction)refresh;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (void)loadData;
 @end
