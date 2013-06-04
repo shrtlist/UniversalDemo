@@ -10,7 +10,6 @@
 		57CF948A175D7BBC0026B35E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57CF9489175D7BBC0026B35E /* Default-568h@2x.png */; };
 		84E3792D14BE0ACC0018998C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3792C14BE0ACC0018998C /* UIKit.framework */; };
 		84E3792F14BE0ACC0018998C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3792E14BE0ACC0018998C /* Foundation.framework */; };
-		84E3793114BE0ACC0018998C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3793014BE0ACC0018998C /* CoreGraphics.framework */; };
 		84E3793314BE0ACC0018998C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3793214BE0ACC0018998C /* CoreData.framework */; };
 		84E3793914BE0ACC0018998C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84E3793714BE0ACC0018998C /* InfoPlist.strings */; };
 		84E3793B14BE0ACC0018998C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3793A14BE0ACC0018998C /* main.m */; };
@@ -29,7 +28,6 @@
 		84E3792814BE0ACC0018998C /* SquareDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E3792C14BE0ACC0018998C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84E3792E14BE0ACC0018998C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		84E3793014BE0ACC0018998C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		84E3793214BE0ACC0018998C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		84E3793614BE0ACC0018998C /* SquareDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquareDemo-Info.plist"; sourceTree = "<group>"; };
 		84E3793814BE0ACC0018998C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -56,7 +54,6 @@
 			files = (
 				84E3792D14BE0ACC0018998C /* UIKit.framework in Frameworks */,
 				84E3792F14BE0ACC0018998C /* Foundation.framework in Frameworks */,
-				84E3793114BE0ACC0018998C /* CoreGraphics.framework in Frameworks */,
 				84E3793314BE0ACC0018998C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +84,6 @@
 			children = (
 				84E3792C14BE0ACC0018998C /* UIKit.framework */,
 				84E3792E14BE0ACC0018998C /* Foundation.framework */,
-				84E3793014BE0ACC0018998C /* CoreGraphics.framework */,
 				84E3793214BE0ACC0018998C /* CoreData.framework */,
 			);
 			name = Frameworks;
