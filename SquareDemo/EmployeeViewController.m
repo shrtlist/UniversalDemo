@@ -15,26 +15,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *yearsEmployedLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
-
-- (void)configureView;
 @end
 
 @implementation EmployeeViewController
-
-@synthesize employee = _employee;
-@synthesize nameLabel;
-@synthesize jobTitleLabel;
-@synthesize dateOfBirthLabel;
-@synthesize yearsEmployedLabel;
-@synthesize photoImageView;
-
-@synthesize masterPopoverController = _masterPopoverController;
 
 #pragma mark - Managing the detail item
 
 - (void)setEmployee:(Employee *)employee
 {
-    if (_employee != employee) {
+    if (_employee != employee)
+    {
         _employee = employee;
         
         // Update the view.
