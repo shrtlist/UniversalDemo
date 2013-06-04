@@ -25,14 +25,14 @@
 
 /* Begin PBXFileReference section */
 		57CF9489175D7BBC0026B35E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		84E3792814BE0ACC0018998C /* SquareDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E3792814BE0ACC0018998C /* UniversalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E3792C14BE0ACC0018998C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84E3792E14BE0ACC0018998C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84E3793214BE0ACC0018998C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		84E3793614BE0ACC0018998C /* SquareDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquareDemo-Info.plist"; sourceTree = "<group>"; };
+		84E3793614BE0ACC0018998C /* UniversalDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UniversalDemo-Info.plist"; sourceTree = "<group>"; };
 		84E3793814BE0ACC0018998C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84E3793A14BE0ACC0018998C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		84E3793C14BE0ACC0018998C /* SquareDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SquareDemo-Prefix.pch"; sourceTree = "<group>"; };
+		84E3793C14BE0ACC0018998C /* UniversalDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniversalDemo-Prefix.pch"; sourceTree = "<group>"; };
 		84E3793D14BE0ACC0018998C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84E3793E14BE0ACC0018998C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		84E3794114BE0ACC0018998C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		84E3792914BE0ACC0018998C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84E3792814BE0ACC0018998C /* SquareDemo.app */,
+				84E3792814BE0ACC0018998C /* UniversalDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,10 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				84E3795414BE15B70018998C /* icon-default-person.png */,
-				84E3793614BE0ACC0018998C /* SquareDemo-Info.plist */,
+				84E3793614BE0ACC0018998C /* UniversalDemo-Info.plist */,
 				84E3793714BE0ACC0018998C /* InfoPlist.strings */,
 				84E3793A14BE0ACC0018998C /* main.m */,
-				84E3793C14BE0ACC0018998C /* SquareDemo-Prefix.pch */,
+				84E3793C14BE0ACC0018998C /* UniversalDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84E3792714BE0ACC0018998C /* SquareDemo */ = {
+		84E3792714BE0ACC0018998C /* UniversalDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84E3795114BE0ACC0018998C /* Build configuration list for PBXNativeTarget "SquareDemo" */;
+			buildConfigurationList = 84E3795114BE0ACC0018998C /* Build configuration list for PBXNativeTarget "UniversalDemo" */;
 			buildPhases = (
 				84E3792414BE0ACC0018998C /* Sources */,
 				84E3792514BE0ACC0018998C /* Frameworks */,
@@ -135,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = SquareDemo;
+			name = UniversalDemo;
 			productName = SquareDemo;
-			productReference = 84E3792814BE0ACC0018998C /* SquareDemo.app */;
+			productReference = 84E3792814BE0ACC0018998C /* UniversalDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,7 +149,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = shrtlist.com;
 			};
-			buildConfigurationList = 84E3792214BE0ACC0018998C /* Build configuration list for PBXProject "SquareDemo" */;
+			buildConfigurationList = 84E3792214BE0ACC0018998C /* Build configuration list for PBXProject "UniversalDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -161,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84E3792714BE0ACC0018998C /* SquareDemo */,
+				84E3792714BE0ACC0018998C /* UniversalDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -286,9 +286,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SquareDemo/SquareDemo-Prefix.pch";
-				INFOPLIST_FILE = "SquareDemo/SquareDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SquareDemo/UniversalDemo-Prefix.pch";
+				INFOPLIST_FILE = "SquareDemo/UniversalDemo-Info.plist";
+				PRODUCT_NAME = UniversalDemo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -297,9 +297,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SquareDemo/SquareDemo-Prefix.pch";
-				INFOPLIST_FILE = "SquareDemo/SquareDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "SquareDemo/UniversalDemo-Prefix.pch";
+				INFOPLIST_FILE = "SquareDemo/UniversalDemo-Info.plist";
+				PRODUCT_NAME = UniversalDemo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -307,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84E3792214BE0ACC0018998C /* Build configuration list for PBXProject "SquareDemo" */ = {
+		84E3792214BE0ACC0018998C /* Build configuration list for PBXProject "UniversalDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84E3794F14BE0ACC0018998C /* Debug */,
@@ -316,7 +316,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84E3795114BE0ACC0018998C /* Build configuration list for PBXNativeTarget "SquareDemo" */ = {
+		84E3795114BE0ACC0018998C /* Build configuration list for PBXNativeTarget "UniversalDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84E3795214BE0ACC0018998C /* Debug */,
