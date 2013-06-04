@@ -3,10 +3,8 @@
 //  SquareDemo
 //
 //  Created by Marco Abundo on 1/11/12.
-//  Copyright (c) 2012 Marco Abundo. All rights reserved.
+//  Copyright (c) 2013 shrtlist.com. All rights reserved.
 //
-
-#import <UIKit/UIKit.h>
 
 @class EmployeeViewController;
 
