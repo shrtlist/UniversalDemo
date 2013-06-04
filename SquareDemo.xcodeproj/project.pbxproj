@@ -22,7 +22,6 @@
 		84E3795514BE15B70018998C /* icon-default-person.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E3795414BE15B70018998C /* icon-default-person.png */; };
 		84E3795A14BE382E0018998C /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3795914BE382E0018998C /* Employee.m */; };
 		84E3796A14BF37B50018998C /* EmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3796914BF37B50018998C /* EmployeeViewController.m */; };
-		84E3796C14BF8E580018998C /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 84E3796B14BF8E570018998C /* README.markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +47,6 @@
 		84E3795914BE382E0018998C /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		84E3796814BF37B50018998C /* EmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeViewController.h; sourceTree = "<group>"; };
 		84E3796914BF37B50018998C /* EmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeViewController.m; sourceTree = "<group>"; };
-		84E3796B14BF8E570018998C /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				57CF9489175D7BBC0026B35E /* Default-568h@2x.png */,
-				84E3796B14BF8E570018998C /* README.markdown */,
 				84E3793414BE0ACC0018998C /* SquareDemo */,
 				84E3792B14BE0ACC0018998C /* Frameworks */,
 				84E3792914BE0ACC0018998C /* Products */,
@@ -182,7 +179,6 @@
 				84E3794214BE0ACC0018998C /* MainStoryboard_iPhone.storyboard in Resources */,
 				84E3794514BE0ACC0018998C /* MainStoryboard_iPad.storyboard in Resources */,
 				84E3795514BE15B70018998C /* icon-default-person.png in Resources */,
-				84E3796C14BF8E580018998C /* README.markdown in Resources */,
 				57CF948A175D7BBC0026B35E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
