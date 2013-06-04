@@ -1,4 +1,4 @@
-## SquareDemo
+## UniversalDemo
 A universal (iPhone/iPad) `UIStoryboard` project. The app consists of a master `UITableView` for displaying a list of employees using dynamic prototype cells, and a detail `UITableView` for displaying employee properties using static cells. A `UISplitViewController` is used in the iPad version to manage the master-detail interface. The `Employee` class defines five properties: name, job title, date of birth, number of years employed and photo.
 
 ### Features:
