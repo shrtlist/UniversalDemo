@@ -3,7 +3,7 @@ A Universal (iPhone/iPad) Xcode `UIStoryboard` project. The app consists of a ma
 
 ### Features:
 - Storyboards are used to define the application's user interface.
-- Core Data is used to define the application’s data model.
+- `CoreData` is used to define the application’s data model.
 - Deletion is supported in the master tableview.
 - Portrait and landscape mode are supported for both iPhone and iPad.
 - An `NSFetchedResultsController` is used with batched fetching.
