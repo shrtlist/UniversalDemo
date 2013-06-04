@@ -73,7 +73,65 @@
     }
 }
 
-#pragma mark - UITableViewDataSource conformance
+#pragma mark - Memory management
+
+- (void)dealloc
+{
+    self.fetchedResultsController.delegate = nil;
+}
+
+#pragma mark - Target-action method
+
+- (IBAction)refresh
+{
+    [self loadData];
+}
+
+#pragma mark - Fetched results controller
+
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (__fetchedResultsController != nil)
+    {
+        return __fetchedResultsController;
+    }
+    
+    // Set up the fetched results controller.
+    // Create the fetch request for the entity.
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Sort by name in ascending order.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    
+    // Set ourselves as delegate
+    aFetchedResultsController.delegate = self;
+    
+    self.fetchedResultsController = aFetchedResultsController;
+    
+    // Perform the fetch
+	NSError *error = nil;
+	if (![self.fetchedResultsController performFetch:&error])
+    {
+	    NSLog(@"Fetch error %@, %@", error, [error userInfo]);
+	}
+    
+    return __fetchedResultsController;
+}
+
+#pragma mark - UITableViewDataSource protocol conformance
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -137,51 +195,7 @@
     }
 }
 
-#pragma mark - Fetched results controller
-
-- (NSFetchedResultsController *)fetchedResultsController
-{
-    if (__fetchedResultsController != nil)
-    {
-        return __fetchedResultsController;
-    }
-    
-    // Set up the fetched results controller.
-    // Create the fetch request for the entity.
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Employee" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
-    
-    // Sort by name in ascending order.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
-    
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
-    
-    // Set ourselves as delegate
-    aFetchedResultsController.delegate = self;
-
-    self.fetchedResultsController = aFetchedResultsController;
-    
-    // Perform the fetch
-	NSError *error = nil;
-	if (![self.fetchedResultsController performFetch:&error])
-    {
-	    NSLog(@"Fetch error %@, %@", error, [error userInfo]);
-	}
-    
-    return __fetchedResultsController;
-}
-
-#pragma mark - NSFetchedResultsControllerDelegate conformance
+#pragma mark - NSFetchedResultsControllerDelegate protocol conformance
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
@@ -248,13 +262,6 @@
     UIImage *image = [UIImage imageWithData:employee.photo];
 
     cell.imageView.image = image;
-}
-
-#pragma mark - Action method
-
-- (IBAction)refresh
-{
-    [self loadData];
 }
 
 #pragma mark - Data load
