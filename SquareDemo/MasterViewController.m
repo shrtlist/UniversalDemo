@@ -24,9 +24,6 @@
 
 @implementation MasterViewController
 
-@synthesize fetchedResultsController = __fetchedResultsController;
-@synthesize managedObjectContext = __managedObjectContext;
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -85,9 +82,9 @@
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
-    if (__fetchedResultsController != nil)
+    if (_fetchedResultsController != nil)
     {
-        return __fetchedResultsController;
+        return _fetchedResultsController;
     }
     
     // Set up the fetched results controller.
@@ -122,7 +119,7 @@
 	    NSLog(@"Fetch error %@, %@", error, [error userInfo]);
 	}
     
-    return __fetchedResultsController;
+    return _fetchedResultsController;
 }
 
 #pragma mark - UITableViewDataSource protocol conformance
