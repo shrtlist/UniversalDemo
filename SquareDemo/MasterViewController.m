@@ -35,17 +35,6 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewDidUnload
-{
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-
-    // Set our fetchedResultsController to nil
-    self.fetchedResultsController = nil;
-
-    [super viewDidUnload];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
