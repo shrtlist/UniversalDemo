@@ -15,11 +15,14 @@ A universal (iPhone/iPad) `UIStoryboard` project. The app consists of a master `
 - Sample data is fake.
 - A single default photo is used.
 
-## Author
-Marco Abundo, Copyright (c) 2013. All rights reserved.
-
 ## Build requirements
 Xcode 4.2, iOS 5.0 SDK, LLVM Compiler 3.0, Automated Reference Counting (ARC).
 
 ## Runtime requirements
 iOS 5.0 and above
+
+## License
+The source code is available under the Apache License, Version 2.0
+
+## Contributing
+Forks, patches and other feedback are always welcome.
