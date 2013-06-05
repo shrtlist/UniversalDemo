@@ -8,17 +8,14 @@
 
 #import "MasterViewController.h"
 #import "EmployeeViewController.h"
-#import "Employee.h"
 
 @interface MasterViewController () // Class extension
-- (IBAction)refresh;
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
-- (void)loadData;
+@property (strong, nonatomic) EmployeeViewController *employeeViewController;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @end
 
 @implementation MasterViewController
 
-@synthesize employeeViewController = _employeeViewController;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
 
