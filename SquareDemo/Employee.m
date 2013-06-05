@@ -1,6 +1,6 @@
 //
 //  Employee.m
-//  SquareDemo
+//  UniversalDemo
 //
 //  Created by Marco Abundo on 1/11/12.
 //  Copyright (c) 2013 shrtlist.com. All rights reserved.

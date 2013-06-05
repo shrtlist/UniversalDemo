@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'SquareDemo' target in the 'SquareDemo' project
+// Prefix header for all source files of the 'UniversalDemo' target in the 'UniversalDemo' project
 //
 
 #import <Availability.h>
