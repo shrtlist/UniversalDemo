@@ -16,7 +16,7 @@
 		84E3793F14BE0ACC0018998C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3793E14BE0ACC0018998C /* AppDelegate.m */; };
 		84E3794214BE0ACC0018998C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E3794014BE0ACC0018998C /* MainStoryboard_iPhone.storyboard */; };
 		84E3794514BE0ACC0018998C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E3794314BE0ACC0018998C /* MainStoryboard_iPad.storyboard */; };
-		84E3794814BE0ACC0018998C /* SquareDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84E3794614BE0ACC0018998C /* SquareDemo.xcdatamodeld */; };
+		84E3794814BE0ACC0018998C /* UniversalDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84E3794614BE0ACC0018998C /* UniversalDemo.xcdatamodeld */; };
 		84E3794B14BE0ACC0018998C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3794A14BE0ACC0018998C /* MasterViewController.m */; };
 		84E3795514BE15B70018998C /* icon-default-person.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E3795414BE15B70018998C /* icon-default-person.png */; };
 		84E3795A14BE382E0018998C /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3795914BE382E0018998C /* Employee.m */; };
@@ -37,7 +37,7 @@
 		84E3793E14BE0ACC0018998C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		84E3794114BE0ACC0018998C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		84E3794414BE0ACC0018998C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		84E3794714BE0ACC0018998C /* SquareDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SquareDemo.xcdatamodel; sourceTree = "<group>"; };
+		84E3794714BE0ACC0018998C /* UniversalDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UniversalDemo.xcdatamodel; sourceTree = "<group>"; };
 		84E3794914BE0ACC0018998C /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		84E3794A14BE0ACC0018998C /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		84E3795414BE15B70018998C /* icon-default-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-default-person.png"; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 				84E3794314BE0ACC0018998C /* MainStoryboard_iPad.storyboard */,
 				84E3794914BE0ACC0018998C /* MasterViewController.h */,
 				84E3794A14BE0ACC0018998C /* MasterViewController.m */,
-				84E3794614BE0ACC0018998C /* SquareDemo.xcdatamodeld */,
+				84E3794614BE0ACC0018998C /* UniversalDemo.xcdatamodeld */,
 				84E3793514BE0ACC0018998C /* Supporting Files */,
 			);
 			path = SquareDemo;
@@ -188,7 +188,7 @@
 			files = (
 				84E3793B14BE0ACC0018998C /* main.m in Sources */,
 				84E3793F14BE0ACC0018998C /* AppDelegate.m in Sources */,
-				84E3794814BE0ACC0018998C /* SquareDemo.xcdatamodeld in Sources */,
+				84E3794814BE0ACC0018998C /* UniversalDemo.xcdatamodeld in Sources */,
 				84E3794B14BE0ACC0018998C /* MasterViewController.m in Sources */,
 				84E3795A14BE382E0018998C /* Employee.m in Sources */,
 				84E3796A14BF37B50018998C /* EmployeeViewController.m in Sources */,
@@ -335,13 +335,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		84E3794614BE0ACC0018998C /* SquareDemo.xcdatamodeld */ = {
+		84E3794614BE0ACC0018998C /* UniversalDemo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				84E3794714BE0ACC0018998C /* SquareDemo.xcdatamodel */,
+				84E3794714BE0ACC0018998C /* UniversalDemo.xcdatamodel */,
 			);
-			currentVersion = 84E3794714BE0ACC0018998C /* SquareDemo.xcdatamodel */;
-			path = SquareDemo.xcdatamodeld;
+			currentVersion = 84E3794714BE0ACC0018998C /* UniversalDemo.xcdatamodel */;
+			path = UniversalDemo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
