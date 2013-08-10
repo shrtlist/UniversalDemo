@@ -1,4 +1,4 @@
-## UniversalDemo
+### UniversalDemo
 A universal (iPhone/iPad) `UIStoryboard` project. The app consists of a master `UITableView` for displaying a list of employees using dynamic prototype cells, and a detail `UITableView` for displaying employee properties using static cells. A `UISplitViewController` is used in the iPad version to manage the master-detail interface. The `Employee` class defines five properties: name, job title, date of birth, number of years employed and photo.
 
 ### Features:
@@ -15,14 +15,14 @@ A universal (iPhone/iPad) `UIStoryboard` project. The app consists of a master `
 - Sample data is fake.
 - A single default photo is used.
 
-## Build requirements
+### Build requirements
 Xcode 4.2, iOS 5.0 SDK, LLVM Compiler 3.0, Automated Reference Counting (ARC).
 
-## Runtime requirements
+### Runtime requirements
 iOS 5.0 and above
 
-## License
+### License
 The source code is available under the Apache License, Version 2.0
 
-## Contributing
+### Contributing
 Forks, patches and other feedback are always welcome.
