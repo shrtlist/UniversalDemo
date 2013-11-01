@@ -18,10 +18,10 @@ A universal (iPhone/iPad) `UIStoryboard` project. The app consists of a master `
 - A single default photo is used.
 
 ### Build requirements
-Xcode 4.2, iOS 5.0 SDK, LLVM Compiler 3.0, Automated Reference Counting (ARC).
+Xcode 4.5, iOS 7.0 SDK, Automated Reference Counting (ARC).
 
 ### Runtime requirements
-iOS 5.0 and above
+iOS 7.0 and above
 
 ### License
 The source code is available under the Apache License, Version 2.0
