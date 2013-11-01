@@ -63,9 +63,15 @@
         self.nameLabel.text = [self.employee name];
         self.jobTitleLabel.text = [self.employee jobTitle];
         
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"MM/dd/yyyy"];
-        NSString *dateOfBirth = [dateFormat stringFromDate:[self.employee dateOfBirth]];
+        static NSDateFormatter *dateFormatter = nil;
+        
+        if (!dateFormatter)
+        {
+            dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+        }
+
+        NSString *dateOfBirth = [dateFormatter stringFromDate:[self.employee dateOfBirth]];
         
         self.dateOfBirthLabel.text = dateOfBirth;
         self.yearsEmployedLabel.text = [NSString stringWithFormat:@"%d", [self.employee yearsEmployed]];
