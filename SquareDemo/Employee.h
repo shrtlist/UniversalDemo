@@ -20,10 +20,10 @@
  */
 @interface Employee : NSManagedObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *jobTitle;
-@property (nonatomic, strong) NSDate *dateOfBirth;
-@property (nonatomic, assign) NSInteger yearsEmployed;
-@property (nonatomic, strong) NSData *photo;
+@property (strong) NSString *name;
+@property (strong) NSString *jobTitle;
+@property (strong) NSDate *dateOfBirth;
+@property (nonatomic) int32_t yearsEmployed;
+@property (strong) NSData *photo;
 
 @end
