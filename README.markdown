@@ -6,13 +6,13 @@ A universal (iPhone/iPad) `UIStoryboard` project. The app consists of a master `
 ### Features:
 - Storyboards are used to define the application's user interface.
 - `CoreData` is used to define the application’s data model.
-- Deletion is supported in the master tableview.
+- Deletion is supported in the master `UITableView`.
 - Portrait and landscape mode are supported for both iPhone and iPad.
 - An `NSFetchedResultsController` is used with batched fetching.
 - Employee list is sorted by first name in ascending order.
 
 ### For the purposes of this demo:
-- Cell selection is disabled in the detail tableview
+- Cell selection is disabled in the detail `UITableView`
 - Sample data is recreated by tapping the Refresh button.
 - Sample data is fake.
 - A single default photo is used.
