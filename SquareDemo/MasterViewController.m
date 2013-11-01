@@ -286,77 +286,77 @@
     employee1.name = @"John Appleseed";
     employee1.jobTitle = @"Software Engineer - iOS";
     employee1.dateOfBirth = [dateFormat dateFromString:@"01/26/1978"];
-    employee1.yearsEmployed = [NSNumber numberWithInt:1];
+    employee1.yearsEmployed = 1;
     employee1.photo = imageData;
     
     Employee *employee2 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee2.name = @"Ellen Roth";
     employee2.jobTitle = @"Software Engineer - Android";
     employee2.dateOfBirth = [dateFormat dateFromString:@"04/15/1985"];
-    employee2.yearsEmployed = [NSNumber numberWithInt:3];
+    employee2.yearsEmployed = 3;
     employee2.photo = imageData;
     
     Employee *employee3 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee3.name = @"Zachary Wong";
     employee3.jobTitle = @"Product Manager";
     employee3.dateOfBirth = [dateFormat dateFromString:@"11/04/1986"];
-    employee3.yearsEmployed = [NSNumber numberWithInt:2];
+    employee3.yearsEmployed = 2;
     employee3.photo = imageData;
     
     Employee *employee4 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee4.name = @"Cynthia Mala";
     employee4.jobTitle = @"Project Manager";
     employee4.dateOfBirth = [dateFormat dateFromString:@"03/14/1989"];
-    employee4.yearsEmployed = [NSNumber numberWithInt:2];
+    employee4.yearsEmployed = 2;
     employee4.photo = imageData;
 
     Employee *employee5 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee5.name = @"John Ross";
     employee5.jobTitle = @"Software Engineer - iOS";
     employee5.dateOfBirth = [dateFormat dateFromString:@"07/14/1972"];
-    employee5.yearsEmployed = [NSNumber numberWithInt:3];
+    employee5.yearsEmployed = 3;
     employee5.photo = imageData;
     
     Employee *employee6 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee6.name = @"Russ Joy";
     employee6.jobTitle = @"Software Engineer - Android";
     employee6.dateOfBirth = [dateFormat dateFromString:@"05/24/1985"];
-    employee6.yearsEmployed = [NSNumber numberWithInt:3];
+    employee6.yearsEmployed = 3;
     employee6.photo = imageData;
     
     Employee *employee7 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee7.name = @"Suzy Chen";
     employee7.jobTitle = @"Manager";
     employee7.dateOfBirth = [dateFormat dateFromString:@"07/14/1972"];
-    employee7.yearsEmployed = [NSNumber numberWithInt:3];
+    employee7.yearsEmployed = 3;
     employee7.photo = imageData;
     
     Employee *employee8 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee8.name = @"Vincent Dorn";
     employee8.jobTitle = @"Software Engineer - iOS";
     employee8.dateOfBirth = [dateFormat dateFromString:@"07/22/1990"];
-    employee8.yearsEmployed = [NSNumber numberWithInt:1];
+    employee8.yearsEmployed = 1;
     employee8.photo = imageData;
     
     Employee *employee9 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee9.name = @"Srini Chagar";
     employee9.jobTitle = @"Product Manager";
     employee9.dateOfBirth = [dateFormat dateFromString:@"08/01/1969"];
-    employee9.yearsEmployed = [NSNumber numberWithInt:3];
+    employee9.yearsEmployed = 3;
     employee9.photo = imageData;
     
     Employee *employee10 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee10.name = @"Lynn Hopi";
     employee10.jobTitle = @"Software Engineer - Android";
     employee10.dateOfBirth = [dateFormat dateFromString:@"02/22/1978"];
-    employee10.yearsEmployed = [NSNumber numberWithInt:3];
+    employee10.yearsEmployed = 3;
     employee10.photo = imageData;
     
     Employee *employee11 = (Employee *)[NSEntityDescription insertNewObjectForEntityForName:@"Employee" inManagedObjectContext:context];
     employee11.name = @"Krista Venkata";
     employee11.jobTitle = @"Product Manager";
     employee11.dateOfBirth = [dateFormat dateFromString:@"09/05/1986"];
-    employee11.yearsEmployed = [NSNumber numberWithInt:2];
+    employee11.yearsEmployed = 2;
     employee11.photo = imageData;
     
     // Save the context.

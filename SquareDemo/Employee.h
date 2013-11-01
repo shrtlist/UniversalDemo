@@ -23,7 +23,7 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *jobTitle;
 @property (nonatomic, strong) NSDate *dateOfBirth;
-@property (nonatomic, strong) NSNumber *yearsEmployed;
+@property (nonatomic, assign) NSInteger yearsEmployed;
 @property (nonatomic, strong) NSData *photo;
 
 @end

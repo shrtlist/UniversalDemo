@@ -68,7 +68,7 @@
         NSString *dateOfBirth = [dateFormat stringFromDate:[self.employee dateOfBirth]];
         
         self.dateOfBirthLabel.text = dateOfBirth;
-        self.yearsEmployedLabel.text = [[self.employee yearsEmployed] stringValue];
+        self.yearsEmployedLabel.text = [NSString stringWithFormat:@"%d", [self.employee yearsEmployed]];
         self.photoImageView.image = [UIImage imageWithData:[self.employee photo]];
     }
     else
