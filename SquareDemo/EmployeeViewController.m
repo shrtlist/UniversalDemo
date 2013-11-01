@@ -39,7 +39,7 @@
         [self configureView];
     }
 
-    if (self.masterPopoverController != nil)
+    if (self.masterPopoverController)
     {
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }        
@@ -81,6 +81,8 @@
     {
         [self clearView];
     }
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - View lifecycle
