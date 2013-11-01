@@ -274,7 +274,7 @@
         [context deleteObject:employee];
     }
     
-    UIImage *image = [UIImage imageNamed:@"icon-default-person.png"];
+    UIImage *image = [UIImage imageNamed:@"icon-default-person"];
     NSData *imageData = UIImagePNGRepresentation(image);
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
