@@ -173,6 +173,8 @@
     return NO;
 }
 
+#pragma mark - UITableViewDelegate protocol conformance
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
