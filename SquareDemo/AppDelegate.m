@@ -19,17 +19,13 @@
 
 @interface AppDelegate () // Class extension
 
-@property (readonly, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @end
 
 @implementation AppDelegate
-
-@synthesize managedObjectContext = __managedObjectContext;
-@synthesize managedObjectModel = __managedObjectModel;
-@synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 
 #pragma mark - UIApplicationDelegate protocol conformance
 
@@ -67,18 +63,18 @@
  */
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (__managedObjectContext != nil)
+    if (_managedObjectContext != nil)
     {
-        return __managedObjectContext;
+        return _managedObjectContext;
     }
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil)
     {
-        __managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [__managedObjectContext setPersistentStoreCoordinator:coordinator];
+        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
-    return __managedObjectContext;
+    return _managedObjectContext;
 }
 
 /**
@@ -87,13 +83,13 @@
  */
 - (NSManagedObjectModel *)managedObjectModel
 {
-    if (__managedObjectModel != nil)
+    if (_managedObjectModel != nil)
     {
-        return __managedObjectModel;
+        return _managedObjectModel;
     }
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"UniversalDemo" withExtension:@"momd"];
-    __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    return __managedObjectModel;
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    return _managedObjectModel;
 }
 
 /**
@@ -102,29 +98,29 @@
  */
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
-    if (__persistentStoreCoordinator != nil)
+    if (_persistentStoreCoordinator != nil)
     {
-        return __persistentStoreCoordinator;
+        return _persistentStoreCoordinator;
     }
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"UniversalDemo.sqlite"];
     
     NSError *error = nil;
-    __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
 
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
     {        
         NSLog(@"%@, %@", error, [error userInfo]);
 
         // In case of an error, delete the existing store and create a new one.
         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
 
-        __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+        _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
         
-        [__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error];
+        [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error];
     }    
     
-    return __persistentStoreCoordinator;
+    return _persistentStoreCoordinator;
 }
 
 #pragma mark - Application's Documents directory
