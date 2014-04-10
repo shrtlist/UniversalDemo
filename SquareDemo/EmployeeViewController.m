@@ -68,7 +68,7 @@
         if (!dateFormatter)
         {
             dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+            dateFormatter.dateStyle = NSDateFormatterShortStyle;
         }
 
         NSString *dateOfBirth = [dateFormatter stringFromDate:[self.employee dateOfBirth]];
