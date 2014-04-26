@@ -40,16 +40,15 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (NSUInteger)supportedInterfaceOrientations
 {
-    // Return YES for supported orientations
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
     {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+        return !UIInterfaceOrientationMaskAllButUpsideDown;
     }
     else
     {
-        return YES;
+        return UIInterfaceOrientationMaskAll;
     }
 }
 
