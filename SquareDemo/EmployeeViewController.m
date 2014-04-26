@@ -27,64 +27,6 @@
 
 @implementation EmployeeViewController
 
-#pragma mark - Managing the detail item
-
-- (void)setEmployee:(Employee *)employee
-{
-    if (_employee != employee)
-    {
-        _employee = employee;
-        
-        // Update the view.
-        [self configureView];
-    }
-
-    if (self.masterPopoverController)
-    {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
-}
-
-- (void)clearView
-{
-    self.nameLabel.text = nil;
-    self.jobTitleLabel.text = nil;
-    self.dateOfBirthLabel.text = nil;
-    self.yearsEmployedLabel.text = nil;
-    self.photoImageView.image = nil;
-}
-
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-    if (self.employee)
-    {
-        self.nameLabel.text = [self.employee name];
-        self.jobTitleLabel.text = [self.employee jobTitle];
-        
-        static NSDateFormatter *dateFormatter = nil;
-        
-        if (!dateFormatter)
-        {
-            dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateStyle = NSDateFormatterShortStyle;
-        }
-
-        NSString *dateOfBirth = [dateFormatter stringFromDate:[self.employee dateOfBirth]];
-        
-        self.dateOfBirthLabel.text = dateOfBirth;
-        self.yearsEmployedLabel.text = [NSString stringWithFormat:@"%d", [self.employee yearsEmployed]];
-        self.photoImageView.image = [UIImage imageWithData:[self.employee photo]];
-    }
-    else
-    {
-        [self clearView];
-    }
-    
-    [self.tableView reloadData];
-}
-
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -105,6 +47,66 @@
     else
     {
         return YES;
+    }
+}
+
+#pragma mark - View configuration
+
+- (void)clearView
+{
+    self.nameLabel.text = nil;
+    self.jobTitleLabel.text = nil;
+    self.dateOfBirthLabel.text = nil;
+    self.yearsEmployedLabel.text = nil;
+    self.photoImageView.image = nil;
+}
+
+- (void)configureView
+{
+    // Update the user interface for the detail item.
+    
+    if (self.employee)
+    {
+        self.nameLabel.text = [self.employee name];
+        self.jobTitleLabel.text = [self.employee jobTitle];
+        
+        static NSDateFormatter *dateFormatter = nil;
+        
+        if (!dateFormatter)
+        {
+            dateFormatter = [[NSDateFormatter alloc] init];
+            dateFormatter.dateStyle = NSDateFormatterShortStyle;
+        }
+        
+        NSString *dateOfBirth = [dateFormatter stringFromDate:[self.employee dateOfBirth]];
+        
+        self.dateOfBirthLabel.text = dateOfBirth;
+        self.yearsEmployedLabel.text = [NSString stringWithFormat:@"%d", [self.employee yearsEmployed]];
+        self.photoImageView.image = [UIImage imageWithData:[self.employee photo]];
+    }
+    else
+    {
+        [self clearView];
+    }
+    
+    [self.tableView reloadData];
+}
+
+#pragma mark - Override property accessor
+
+- (void)setEmployee:(Employee *)employee
+{
+    if (_employee != employee)
+    {
+        _employee = employee;
+        
+        // Update the view.
+        [self configureView];
+    }
+    
+    if (self.masterPopoverController)
+    {
+        [self.masterPopoverController dismissPopoverAnimated:YES];
     }
 }
 
