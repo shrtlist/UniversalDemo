@@ -16,8 +16,9 @@
 
 #import "AppDelegate.h"
 #import "MasterViewController.h"
+#import "EmployeeViewController.h"
 
-@interface AppDelegate () // Class extension
+@interface AppDelegate () <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -32,27 +33,33 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-
-    MasterViewController *controller = nil;
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+    navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+    splitViewController.delegate = self;
+    
+    navigationController = [splitViewController.viewControllers firstObject];
+    
+    MasterViewController *masterViewController = (MasterViewController *)navigationController.topViewController;
+    masterViewController.managedObjectContext = self.managedObjectContext;
+    
+    return YES;
+}
+
+#pragma mark - UISplitViewControllerDelegate protocol conformance
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController
+{
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[EmployeeViewController class]] && ([(EmployeeViewController *)[(UINavigationController *)secondaryViewController topViewController] employee] == nil))
     {
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;
-        
-        UINavigationController *masterNavigationController = [splitViewController.viewControllers objectAtIndex:0];
-        controller = (MasterViewController *)masterNavigationController.topViewController;
+        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+        return YES;
     }
     else
     {
-        UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-        controller = (MasterViewController *)navigationController.topViewController;
+        return NO;
     }
-    
-    controller.managedObjectContext = self.managedObjectContext;
-    
-    return YES;
 }
 
 #pragma mark - Core Data stack
@@ -71,7 +78,7 @@
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil)
     {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return _managedObjectContext;

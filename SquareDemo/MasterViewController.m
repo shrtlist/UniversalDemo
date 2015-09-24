@@ -18,7 +18,6 @@
 #import "EmployeeViewController.h"
 
 @interface MasterViewController () // Class extension
-@property (strong, nonatomic) EmployeeViewController *employeeViewController;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @end
 
@@ -40,16 +39,11 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (void)viewWillAppear:(BOOL)animated
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-    {
-        return !UIInterfaceOrientationMaskAllButUpsideDown;
-    }
-    else
-    {
-        return UIInterfaceOrientationMaskAll;
-    }
+    self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
+    
+    [super viewWillAppear:animated];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -59,7 +53,11 @@
     {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Employee *employee = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setEmployee:employee];
+        
+        UINavigationController *navigationController = segue.destinationViewController;
+        
+        EmployeeViewController *employeeViewController = (EmployeeViewController *)navigationController.topViewController;
+        employeeViewController.employee = employee;
     }
 }
 
@@ -203,6 +201,10 @@
             
         case NSFetchedResultsChangeDelete:
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+
+        case NSFetchedResultsChangeMove:
+        case NSFetchedResultsChangeUpdate:
             break;
     }
 }

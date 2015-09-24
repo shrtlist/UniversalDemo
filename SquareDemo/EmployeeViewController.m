@@ -22,7 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateOfBirthLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearsEmployedLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
-@property (strong, nonatomic) UIPopoverController *masterPopoverController;
 @end
 
 @implementation EmployeeViewController
@@ -103,11 +102,6 @@
         // Update the view.
         [self configureView];
     }
-    
-    if (self.masterPopoverController)
-    {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }
 }
 
 #pragma mark - UISplitViewControllerDelegate protocol conformance
@@ -116,14 +110,12 @@
 {
     barButtonItem.title = NSLocalizedString(@"Employees", @"Employees");
     [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
-    self.masterPopoverController = popoverController;
 }
 
 - (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
+    // Called when the view is shown again in the split view.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
-    self.masterPopoverController = nil;
 }
 
 @end

@@ -14,8 +14,11 @@
  * limitations under the License.
  */
 
+@class EmployeeViewController;
+
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
+@property (strong, nonatomic) EmployeeViewController *employeeViewController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
