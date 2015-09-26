@@ -18,10 +18,10 @@ A `CoreData` MDI app which consists of a master `UITableView` for displaying a l
 - A single default photo is used.
 
 ### Build requirements
-Xcode 4.5, iOS 7.0 SDK, Automated Reference Counting (ARC).
+Xcode 7, iOS 9.0 SDK, Automated Reference Counting (ARC).
 
 ### Runtime requirements
-iOS 7.0 and above
+iOS 9.0 and above
 
 ### License
 The source code is available under the Apache License, Version 2.0
