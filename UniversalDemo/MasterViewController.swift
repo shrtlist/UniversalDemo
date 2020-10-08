@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 shrtlist.com
+ * Copyright 2020 shrtlist@gmail.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import CoreData
 
 class MasterViewController: UITableViewController {
 
-    var managedObjectContext: NSManagedObjectContext? = nil
+    var managedObjectContext: NSManagedObjectContext?
 
     /// Fetched results controller
     var fetchedResultsController: NSFetchedResultsController<Employee> {
@@ -55,7 +55,7 @@ class MasterViewController: UITableViewController {
         return _fetchedResultsController!
     }
 
-    private var _fetchedResultsController: NSFetchedResultsController<Employee>? = nil
+    private var _fetchedResultsController: NSFetchedResultsController<Employee>?
 
     // MARK: View lifecycle
 
@@ -128,7 +128,7 @@ class MasterViewController: UITableViewController {
         return true
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let context = fetchedResultsController.managedObjectContext
             context.delete(fetchedResultsController.object(at: indexPath))
@@ -145,7 +145,7 @@ class MasterViewController: UITableViewController {
     }
 
     /// Set cell properties with employee info
-    fileprivate func configureCell(_ cell: UITableViewCell, withEmployee employee: Employee) {
+    private func configureCell(_ cell: UITableViewCell, withEmployee employee: Employee) {
         cell.textLabel?.text = employee.name
         cell.detailTextLabel?.text = employee.jobTitle
 
@@ -183,6 +183,8 @@ extension MasterViewController: NSFetchedResultsControllerDelegate {
             case .move:
                 configureCell(tableView.cellForRow(at: indexPath!)!, withEmployee: anObject as! Employee)
                 tableView.moveRow(at: indexPath!, to: newIndexPath!)
+        @unknown default:
+            fatalError()
         }
     }
 
@@ -231,79 +233,79 @@ extension MasterViewController {
         let employee1 = Employee(context: context)
         employee1.name = "John Appleseed"
         employee1.jobTitle = "Software Engineer - iOS"
-        employee1.dateOfBirth = dateFormatter.date(from: "01/26/1978")! as NSDate
+        employee1.dateOfBirth = dateFormatter.date(from: "01/26/1978")! as Date
         employee1.yearsEmployed = 1
-        employee1.photo = UIImagePNGRepresentation(image) as NSData?
+        employee1.photo = image.pngData() as Data?
 
         let employee2 = Employee(context: context)
         employee2.name = "Ellen Roth"
         employee2.jobTitle = "Software Engineer - Android"
-        employee2.dateOfBirth = dateFormatter.date(from: "04/15/1985")! as NSDate
+        employee2.dateOfBirth = dateFormatter.date(from: "04/15/1985")! as Date
         employee2.yearsEmployed = 3
-        employee2.photo = UIImagePNGRepresentation(image) as NSData?
+        employee2.photo = image.pngData() as Data?
 
         let employee3 = Employee(context: context)
         employee3.name = "Zachary Wong"
         employee3.jobTitle = "Product Manager"
-        employee3.dateOfBirth = dateFormatter.date(from: "11/04/1986")! as NSDate
+        employee3.dateOfBirth = dateFormatter.date(from: "11/04/1986")! as Date
         employee3.yearsEmployed = 2
-        employee3.photo = UIImagePNGRepresentation(image) as NSData?
+        employee3.photo = image.pngData() as Data?
 
         let employee4 = Employee(context: context)
         employee4.name = "Cynthia Mala"
         employee4.jobTitle = "Project Manager"
-        employee4.dateOfBirth = dateFormatter.date(from: "03/14/1989")! as NSDate
+        employee4.dateOfBirth = dateFormatter.date(from: "03/14/1989")! as Date
         employee4.yearsEmployed = 2
-        employee4.photo = UIImagePNGRepresentation(image) as NSData?
+        employee4.photo = image.pngData() as Data?
 
         let employee5 = Employee(context: context)
         employee5.name = "John Ross"
         employee5.jobTitle = "Software Engineer - iOS"
-        employee5.dateOfBirth = dateFormatter.date(from: "07/14/1972")! as NSDate
+        employee5.dateOfBirth = dateFormatter.date(from: "07/14/1972")! as Date
         employee5.yearsEmployed = 3
-        employee5.photo = UIImagePNGRepresentation(image) as NSData?
+        employee5.photo = image.pngData() as Data?
 
         let employee6 = Employee(context: context)
         employee6.name = "Russ Joy"
         employee6.jobTitle = "Software Engineer - Android"
-        employee6.dateOfBirth = dateFormatter.date(from: "05/24/1985")! as NSDate
+        employee6.dateOfBirth = dateFormatter.date(from: "05/24/1985")! as Date
         employee6.yearsEmployed = 3
-        employee6.photo = UIImagePNGRepresentation(image) as NSData?
+        employee6.photo = image.pngData() as Data?
 
         let employee7 = Employee(context: context)
         employee7.name = "Suzy Chen"
         employee7.jobTitle = "Manager"
-        employee7.dateOfBirth = dateFormatter.date(from: "07/14/1972")! as NSDate
+        employee7.dateOfBirth = dateFormatter.date(from: "07/14/1972")! as Date
         employee7.yearsEmployed = 3
-        employee7.photo = UIImagePNGRepresentation(image) as NSData?
+        employee7.photo = image.pngData() as Data?
 
         let employee8 = Employee(context: context)
         employee8.name = "Vincent Dorn"
         employee8.jobTitle = "Software Engineer - iOS"
-        employee8.dateOfBirth = dateFormatter.date(from: "07/22/1990")! as NSDate
+        employee8.dateOfBirth = dateFormatter.date(from: "07/22/1990")! as Date
         employee8.yearsEmployed = 1
-        employee8.photo = UIImagePNGRepresentation(image) as NSData?
+        employee8.photo = image.pngData() as Data?
 
         let employee9 = Employee(context: context)
         employee9.name = "Srini Chagar"
         employee9.jobTitle = "Product Manager"
-        employee9.dateOfBirth = dateFormatter.date(from: "08/01/1969")! as NSDate
+        employee9.dateOfBirth = dateFormatter.date(from: "08/01/1969")! as Date
         employee9.yearsEmployed = 3
-        employee9.photo = UIImagePNGRepresentation(image) as NSData?
+        employee9.photo = image.pngData() as Data?
 
         let employee10 = Employee(context: context)
         employee10.name = "Lynn Hopi"
         employee10.jobTitle = "Software Engineer - Android"
-        employee10.dateOfBirth = dateFormatter.date(from: "02/22/1978")! as NSDate
+        employee10.dateOfBirth = dateFormatter.date(from: "02/22/1978")! as Date
         employee10.yearsEmployed = 3
-        employee10.photo = UIImagePNGRepresentation(image) as NSData?
+        employee10.photo = image.pngData() as Data?
 
         let employee11 = Employee(context: context)
         employee11.name = "Krista Venkata"
         employee11.jobTitle = "Product Manager"
-        employee11.dateOfBirth = dateFormatter.date(from: "09/05/1986")! as NSDate
+        employee11.dateOfBirth = dateFormatter.date(from: "09/05/1986")! as Date
         employee11.yearsEmployed = 2
-        employee11.photo = UIImagePNGRepresentation(image) as NSData?
+        employee11.photo = image.pngData() as Data?
 
         do {
             try context.save()
